@@ -1,5 +1,7 @@
 <img src="http://2017.igem.org/wiki/images/a/ac/T--EPFL--ToeholdDesigner_V2.svg"/>
 
+This project is an update to work by the 2017 EPFL iGEM team. We are deploying a version of their software as a web tool for public use. Almost all of the development was done by them. We thank them incredibly for their great work.
+
 This tool allows people to easily generate toehold switches and targets for a unique virus sequence. It represents a pipeline that puts together techniques for generating this types of switches<sup>[1](#1), [2](#2)</sup> and processing algorithms<sup>[3](#3), [4](#4), [5](#5)</sup>. 
 
 It strictly follows the Series A and B designs of the Zika virus<sup>[2](#2)</sup>, generalized for any unique RNA virus sequence. 
@@ -15,7 +17,7 @@ We can then choose the first few Series A or B toeholds and test them in the lab
 <b>Toehold designer</b> was tested on succesfully generating a toehold switch for a hepatitis C sequence. The results can be seen [here](http://2017.igem.org/Team:EPFL/Results/Toehold#software). 
 
 
-# Instalation in only 5 steps
+# Instalation in only 0 steps (None of this will be necessary!)
 
 1. Install NUPACK from [here](http://nupack.org/downloads)
 2. Install Python from [here](https://www.python.org/downloads/release/python-360/)
