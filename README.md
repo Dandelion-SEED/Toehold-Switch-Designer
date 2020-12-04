@@ -17,7 +17,7 @@ We can then choose the first few Series A or B toeholds and test them in the lab
 <b>Toehold designer</b> was tested on succesfully generating a toehold switch for a hepatitis C sequence. The results can be seen [here](http://2017.igem.org/Team:EPFL/Results/Toehold#software). 
 
 
-# Instalation in only 0 steps (None of this will be necessary!)
+# Installation in only 0 steps (None of this will be necessary!)
 
 1. Install NUPACK from [here](http://nupack.org/downloads)
 2. Install Python from [here](https://www.python.org/downloads/release/python-360/)
