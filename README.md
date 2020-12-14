@@ -36,6 +36,20 @@ That's it. You have the toehold designer running in your browser now!
 # How to use it? 
 Take a look of [this demo](http://2017.igem.org/wiki/images/0/0d/T--EPFL--software-demo.gif)
 
+# License
+NUPACK Software License Agreement for Non-Commercial Academic Use and Redistribution
+Copyright © 2020 California Institute of Technology. All rights reserved.
+
+Use and redistribution in source form and/or binary form, with or without modification, are permitted for non-commercial academic purposes only, provided that the following conditions are met:
+
+Redistributions in source form must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation provided with the distribution.
+
+Web applications that use the software in source form or binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in online documentation provided with the web application.
+
+Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote derivative works without specific prior written permission.
+
 # References 
 
 <a name="1">[1] Green, Alexander A., et al. "Toehold switches: de-novo-designed regulators of gene expression." Cell 159.4 (2014): 925-939.</a>
