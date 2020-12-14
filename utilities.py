@@ -37,26 +37,26 @@ def no_stop(sequence):
     return True
 
 
-def possible_toehold_B(reg, rev, loop, linker, opt):
-    #loop = 'GGACUUUAGAACAGAGGAGAUAAAGAUG'
-    #linker = 'AACCUGGCGGCAGCGCAAAAG'
+def possible_toehold_B(reg, rev):#, loop, linker, opt):
+    loop = 'GGACUUUAGAACAGAGGAGAUAAAGAUG'
+    linker = 'AACCUGGCGGCAGCGCAAAAG'
     toeholds = []
     
-    if(opt = None):
-        for n in ['A', 'G', 'U', 'C']:
-            if no_stop(reg[0:11] + n + linker):
-                toeholds.append(rev + loop + reg[0:11] + n + linker)
-    else:
-        if no_stop(reg[0:11] + opt + linker):
-            toeholds.append(rev + loop + reg[0:11] + opt + linker)
+    #if(opt = None):
+    for n in ['A', 'G', 'U', 'C']:
+        if no_stop(reg[0:11] + n + linker):
+            toeholds.append(rev + loop + reg[0:11] + n + linker)
+    # else:
+    #     if no_stop(reg[0:11] + opt + linker):
+    #         toeholds.append(rev + loop + reg[0:11] + opt + linker)
     #TODO: bundle different opts into one entry if necessary
 
     return toeholds
 
 
-def possible_toehold_A(reg_sequences, rev_comp_sequences, loop, linker):
-    #loop = 'GUUAUAGUUAUGAACAGAGGAGACAUAACAUGAAC'
-    #linker = 'GUUAACCUGGCGGCAGCGCAAAAG'
+def possible_toehold_A(reg_sequences, rev_comp_sequences):#, loop, linker):
+    loop = 'GUUAUAGUUAUGAACAGAGGAGACAUAACAUGAAC'
+    linker = 'GUUAACCUGGCGGCAGCGCAAAAG'
     toeholds = {}
 
     for rev, reg in zip(rev_comp_sequences, reg_sequences):
@@ -114,10 +114,10 @@ def parse_pairs_result(res, length):
 
     return final
 
-def nupack_analysis(sequence, secondary_sensor,  window, sensor_type, result_path,
-                    loop = 'GUUAUAGUUAUGAACAGAGGAGACAUAACAUGAAC',
-                    linker = 'GUUAACCUGGCGGCAGCGCAAAAG',
-                    opt = None):
+def nupack_analysis(sequence, secondary_sensor,  window, sensor_type, result_path):#,
+                    # loop = 'GUUAUAGUUAUGAACAGAGGAGACAUAACAUGAAC',
+                    # linker = 'GUUAACCUGGCGGCAGCGCAAAAG',
+                    # opt = None):
     list_for_table = []
 
     processed_sequence = sequence.upper().replace('T', 'U').replace(' ', '')
@@ -126,9 +126,9 @@ def nupack_analysis(sequence, secondary_sensor,  window, sensor_type, result_pat
 
     #CHANGES: loop, linker, opt added as parameters, id included in tuple for table
     if sensor_type == 'A':
-        target_toehold_map = possible_toehold_A(reg_sequences, rev_comp_sequences,                                      loop, linker)
+        target_toehold_map = possible_toehold_A(reg_sequences, rev_comp_sequences)#,                                      loop, linker)
     else:
-        target_toehold_map = possible_toehold_B(reg_sequences, rev_comp_sequences,                                      loop, linker, opt)
+        target_toehold_map = possible_toehold_B(reg_sequences, rev_comp_sequences)#,                                      loop, linker, opt)
 
     sequence = sequence.upper().replace('T', 'U')
     single_streadness_sequence = single_streadness(sequence, result_path, wait=6)
